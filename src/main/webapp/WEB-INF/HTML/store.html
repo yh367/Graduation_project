@@ -9,7 +9,139 @@
   <script type="text/javascript" src="../../js/bootstrap.js"></script>
 
   <style>
+    #nav{
+      width:1240px;
+      height:460px;
+      position:relative;
+    }
+    #xx{
+      width:1240px;/*原本243，现在加东西改动*/
+      height:460px;
+      float:left;  position:absolute;
+      z-index:2;
+    }
+    /*left1的设计*/
+    #left1{
+      width:243px;/*原本243，现在加东西改动*/
+      margin-top:16px;
+      font-size:16px;
+      font-family:"楷体", "微软雅黑", "宋体";
+      position:absolute;
+      z-index:2;
+    }
 
+    #disp{
+      width:740px;
+      height:460px;
+      background:white;
+      margin-left:243px;
+      position:absolute;
+      z-index:2;
+    }
+    #disp ul{
+      width:243px;
+      height:460px;
+      float:left;
+      list-style-type: none;
+    }
+    #disp ul li{
+      position: relative;
+      float: left;
+      width: 265px;
+      height: 76px;
+      padding-left:10px;
+      padding-top:5px;
+    }
+
+
+
+    #disp1{
+      width:493px;
+      height:460px;
+      background:white;
+      margin-left:243px;
+      position:absolute;
+      z-index:2;
+    }
+    #disp1 ul{
+      width:243px;
+      height:460px;
+      float:left;
+      list-style-type: none;
+    }
+    #disp1 ul li{
+      position: relative;
+      float: left;
+      width: 265px;
+      height: 76px;
+      padding-left:10px;
+      padding-top:5px;
+    }
+
+    #disp2{
+      width:9970px;
+      height:460px;
+      background:white;
+      margin-left:243px;
+      position:absolute;
+      z-index:2;
+    }
+    #disp2 ul{
+      width:243px;
+      height:460px;
+      float:left;
+      list-style-type: none;
+    }
+    #disp2 ul li{
+      position: relative;
+      float: left;
+      width: 265px;
+      height: 76px;
+      padding-left:10px;
+      padding-top:5px;
+    }
+
+    .thum8{
+      float: left;
+      margin-right: 12px;
+      vertical-align: middle;
+    }
+    .text{
+      float: left;
+      width: 172px;
+      line-height: 40px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    #left1 .li1{
+      display:block;
+      width:243px;
+      height:42px;
+      line-height:42px;
+      float:left;
+    }
+    #left1 .li1:hover{
+      background-color:#ff6700;
+    }
+    .cl{
+      text-decoration:none;
+      color:#FFF;
+    }
+    .o{
+      font-size:20px;
+      color:#CCC;
+    }
+
+    /*right2的设计样式*/
+
+    #right2{
+      width:1240px;
+      height:460px;
+      position:relative;
+      z-index:1;
+    }
   </style>
 
 </head>
@@ -42,5 +174,15 @@
 </nav>
 
 
+<div class="container" style="margin-top: 100px;background-color: #76bace;height: 600px;">
+    <div class="row">
+
+
+    </div>
+</div>
+<!--底部部分-->
+<div class="container" style="background-color: #d0e8f3; height: 80px; margin-top: 60px; border-radius: 8px;">
+  <h2 class="text-center" style="padding-top: 10px;">Copyright © 2021.Company name All rights reserved.</h2>
+</div>
 </body>
 </html>

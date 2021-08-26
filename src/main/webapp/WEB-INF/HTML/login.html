@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
   <meta charset="UTF-8">
   <title>登录</title>
@@ -7,6 +7,22 @@
 
   <script src="../../js/jquery-3.6.0.min.js"></script>
   <script type="text/javascript" src="../../js/bootstrap.js"></script>
+  <style>
+    .yh{
+      background-image: url("../../images/背景01.jpg");
+      margin-top: 100px;
+      height: 700px;
+      border-radius: 8px;
+    }
+    .btn:focus,
+    .btn:active:focus,
+    .btn.active:focus,
+    .btn.focus,
+    .btn:active.focus,
+    .btn.active.focus {
+      outline: none;
+    }
+  </style>
 </head>
 <body>
 
@@ -35,6 +51,47 @@
     </div>
   </div>
 </nav>
+
+
+<div class="container yh text-center">
+  <div id="lk_header" style="position: relative;margin-top: 100px;">
+    <h1 class="text-center" style="margin-bottom: 100px;">&emsp;欢迎登陆小余的校园二手网站</h1>
+    <form class="form-horizontal" role="form">
+      <div class="form-group has-error "><!--has-error:错误：红色-->
+        <label class="col-sm-1 control-label col-md-offset-4" for="account">账户<span class="glyphicon glyphicon-user"></span></label>  <!--span设置图标-->
+        <div class="col-md-3 ">
+          <input id="account" type="text"  class="form-control" placeholder="请输入账户">
+        </div>
+      </div>
+      <div class="form-group has-success"><!--has-success:设置成功-->
+        <label class="col-sm-1 control-label col-md-offset-4" for="passwd">密码<span class="glyphicon glyphicon-lock"></span></label>
+        <div class="col-md-3">
+          <!--form-control:设置有圆角-->
+          <input type="password" id="passwd" class="form-control" placeholder="请输入密码">
+        </div>
+      </div>
+      <div class="form-group has-warning"><!--has-warning:设置警告-->
+        <div class="col-md-offset-5 col-sm-2">
+          <!--checkbox:表示可以复选，一个div嵌套一个选项-->
+          <div class="checkbox">
+            <label>
+              <input type="checkbox">记住密码
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="form-group has-active">
+        <div class="col-md-3 col-md-offset-5">
+          <input type="submit" class="form-control btn btn-info" value="登陆">
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="container" style="background-color: #d0e8f3; height: 80px; margin-top: 30px; margin-bottom: 10px; border-radius: 8px;">
+  <h2 class="text-center" style="padding-top: 10px;">Copyright © 2021.Company name All rights reserved.</h2>
+</div>
 
 </body>
 </html>
