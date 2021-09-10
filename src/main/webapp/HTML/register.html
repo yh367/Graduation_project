@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>注册</title>
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.css"/>
+
+  <script src="../js/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="../js/bootstrap.js"></script>
+
+  <style>
+    .yu{
+      background-color: #5bc0de;
+      height: 700px;
+      margin-top: 100px;
+      background-image: url("../images/背景01.jpg");
+      border-radius: 8px;
+    }
+    .btn:focus,
+    .btn:active:focus,
+    .btn.active:focus,
+    .btn.focus,
+    .btn:active.focus,
+    .btn.active.focus {
+      outline: none;
+    }
+  </style>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="row">
+      <div class="navbar-header col-md-offset-1 col-xs-offset-1">
+        <span class="navbar-brand" style="color: white;">重财校园二手交易网</span>
+      </div>
+      <form class="navbar-form col-md-4 col-xs-4" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <a type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span> </a>
+      </form>
+      <div class="navbar-header">
+        </span><a class="navbar-brand" href="index.html">首页</a>
+        </span><a class="navbar-brand" href="store.html">商城</a>
+        </span><a class="navbar-brand" href="wanting_buying.html">求购商城</a>
+        </span><a class="navbar-brand" href="feedback.html">反馈</a>
+        </span><a class="navbar-brand" href="contact_us.html">联系我们</a>
+        </span><a class="navbar-brand" href="login.html">登录</a>
+        </span><a class="navbar-brand" href="register.html">注册</a>
+        </span><a class="navbar-brand" href="shopping_cars.html">购物车</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="container yu">
+
+  <form action="/register" class="form-horizontal container" role="form" style="width: 600px;background-color: #7fb1bd;margin-top: 180px;">
+    <h3 class="text-center">用户信息</h3>
+
+    <div class="form-group">
+      <label for="account" class="control-label col-md-2" style="color: #d45a58;">账户<span class="glyphicon glyphicon-user"></span></label>
+      <!--        上面的id就是为了点姓名这个东西的时候可以直接聚焦到input哪里去-->
+      <div class="col-md-8">
+        <input name="account" type="text" id="account" class="form-control" placeholder="account">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="passwd" class="control-label col-md-2" style="color: #4cae4c;">密码<span class="glyphicon glyphicon-lock"></span></label>
+      <div class="col-md-8">
+        <div class="input-group">
+<!--          只能输入数字和英文-->
+          <input name="pwd"  onkeyup="value=value.replace(/[^\w\.\/]/ig,'')" type="password" id="passwd" class="form-control fc-clear" placeholder="请输入密码" maxlength="10" style="border-right: white;background-color: white;"/>
+          <span class="input-group-addon passwords" style="background-color: white;"><i id="io" class="glyphicon glyphicon-eye-close"></i></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email" class="control-label col-md-2">电子邮件</label>
+      <div class="col-md-8">
+        <input name="email" type="email" id="email" class="form-control" placeholder="email">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="address" class="control-label col-md-2">地址</label>
+      <div class="col-md-8">
+        <input name="address" type="text" id="address" class="form-control" placeholder="address">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-2 col-md-push-5">
+        <input type="submit" class="form-control btn btn-info" value="注册">
+      </div>
+    </div>
+
+  </form>
+
+</div>
+
+<div class="container" style="background-color: #d0e8f3; height: 80px; margin-top: 30px; margin-bottom: 10px; border-radius: 8px;">
+  <h2 class="text-center" style="padding-top: 10px;">Copyright © 2021.Company name All rights reserved.</h2>
+</div>
+<script>
+  //密码框显示
+  var passwords = $('#io');
+  var showPwd = $("#passwd");
+  console.log(passwords );
+  passwords.off('click').on('click',function(){
+    if(passwords.hasClass('glyphicon-eye-close')){
+      passwords.removeClass('glyphicon-eye-close').addClass('glyphicon-eye-open');
+      showPwd.prop('type','text');
+    }else{
+      passwords.removeClass('glyphicon-eye-open').addClass('glyphicon-eye-close');
+      showPwd.prop('type','password');
+    };
+  });
+
+</script>
+</body>
+</html>

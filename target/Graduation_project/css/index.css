@@ -17,3 +17,11 @@ hr {
     height: 3px;
     border: 0;
 }
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+    outline: none;
+}
