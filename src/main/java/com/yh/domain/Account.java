@@ -10,6 +10,7 @@ public class Account implements Serializable {
         private String email;
         private String address;
 
+
     public String getUsername() {
         return username;
     }
@@ -41,5 +42,4 @@ public class Account implements Serializable {
     public void setAddress(String address) {
         this.address = address;
     }
-
 }

@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.yh.dao.AccountDao">
-    <select id="saveUser" resultType="com.yh.domain.Account">
-        insert into student  values (#{account},#{pwd},#{email},#{address})
-    </select>
+<!--    resultType是返回类型-->
+<!--    <select id="saveUser" resultType="com.yh.domain.Account">-->
+<!--         -->
+<!--    </select>-->
+<!--    不同的sql语句用不同的标签-->
+    <insert id="saveUser" parameterType="com.yh.domain.Account">
+        INSERT INTO account values (#{username},#{pwd},#{email},#{address})
+    </insert>
+
 
 </mapper>

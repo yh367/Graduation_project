@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
   <title>注册</title>
@@ -57,14 +57,14 @@
 
 <div class="container yu">
 
-  <form action="/register" class="form-horizontal container" role="form" style="width: 600px;background-color: #7fb1bd;margin-top: 180px;">
+  <form action="../register"  class="form-horizontal container" role="form" style="width: 600px;background-color: #7fb1bd;margin-top: 180px;">
     <h3 class="text-center">用户信息</h3>
 
     <div class="form-group">
       <label for="account" class="control-label col-md-2" style="color: #d45a58;">账户<span class="glyphicon glyphicon-user"></span></label>
       <!--        上面的id就是为了点姓名这个东西的时候可以直接聚焦到input哪里去-->
       <div class="col-md-8">
-        <input name="account" type="text" id="account" class="form-control" placeholder="account">
+        <input name="username" type="text" id="account" class="form-control" placeholder="account">
       </div>
     </div>
 
