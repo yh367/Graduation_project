@@ -45,6 +45,5 @@
         <!--        把<url-pattern>元素的值改为 / ，表示要拦截所有的请求，并交由Spring MVC的后台控制器来处理，-->
         <url-pattern>/</url-pattern>
     </servlet-mapping>
-
 </web-app>
 

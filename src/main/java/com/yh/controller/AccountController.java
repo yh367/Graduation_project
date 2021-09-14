@@ -13,8 +13,9 @@ public class AccountController {
     private saveUser saveUser;
 
     @RequestMapping("/register")
-    public void saveAccount(Account account){
+    public String saveAccount(Account account){
         System.out.println("controller层：保存帐户...");
         saveUser.saveUser(account);
+        return "success";
     }
 }

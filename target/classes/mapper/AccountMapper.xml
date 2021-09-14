@@ -5,7 +5,7 @@
 <!--    <select id="saveUser" resultType="com.yh.domain.Account">-->
 <!--         -->
 <!--    </select>-->
-<!--    不同的sql语句用不同的标签-->
+<!--    不同的sql语句用不同的标签 注意这个下面的名称和前端页面传来的名称要和数据库的表单名一样-->
     <insert id="saveUser" parameterType="com.yh.domain.Account">
         INSERT INTO account values (#{username},#{pwd},#{email},#{address})
     </insert>
