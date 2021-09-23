@@ -25,10 +25,9 @@
     <mvc:resources mapping="/js/**" location="/js/"/>
     <mvc:resources mapping="/img/**" location="/images/"/>
 
-
     <!--    模板解释器-->
     <bean id="templateResolver" class="org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver">
-        <property name="prefix" value="/HTML/"/>
+        <property name="prefix" value="/"/>
         <property name="suffix" value=".html"/>
         <property name="templateMode" value="HTML"/>
         <property name="cacheable" value="true"/>
@@ -38,10 +37,9 @@
         <property name="templateResolver" ref="templateResolver"/>
         <property name="enableSpringELCompiler" value="true"/>
     </bean>
-    <bean class="org.thymeleaf.spring4.view.ThymeleafViewResolver">
+    <bean id="thymeleafViewResolver" class="org.thymeleaf.spring4.view.ThymeleafViewResolver">
         <property name="templateEngine" ref="templateEngine"/>
         <property name="characterEncoding" value="UTF-8"/>
-        <property name="order" value="1"/>
     </bean>
 
 

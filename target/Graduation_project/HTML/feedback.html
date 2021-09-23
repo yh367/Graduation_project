@@ -29,7 +29,7 @@
 <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="row">
-      <div class="navbar-header col-md-offset-1 col-xs-offset-1">
+      <div class="navbar-header" style="margin-left: 30px;">
         <span class="navbar-brand" style="color: white;">重财校园二手交易网</span>
       </div>
       <form class="navbar-form col-md-4 col-xs-4" role="search">
@@ -47,6 +47,7 @@
         </span><a class="navbar-brand" href="login.html">登录</a>
         </span><a class="navbar-brand" href="register.html">注册</a>
         </span><a class="navbar-brand" href="shopping_cars.html">购物车</a>
+        </span><a class="navbar-brand" href="login.html" style="color: white;">账户:<span id="log" th:text="">未登录</span></a>
       </div>
     </div>
   </div>
@@ -99,6 +100,12 @@
 <div class="container" style="background-color: #d0e8f3; height: 80px; margin-top: 50px; border-radius: 8px;">
   <h2 class="text-center" style="padding-top: 10px;">Copyright © 2021.Company name All rights reserved.</h2>
 </div>
-
+<script th:inline="javascript">
+  var username=document.cookie.split(";")[0].split("=")[1];
+  console.log(username);
+  $("#log").text(username);
+  console.log($("#log"));
+</script>
 </body>
+
 </html>

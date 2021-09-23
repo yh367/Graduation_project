@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yh.dao.SaveFeedBackMsg">
+    <!--    resultType是返回类型-->
+    <!--    <select id="saveUser" resultType="com.yh.domain.Account">-->
+    <!--         -->
+    <!--    </select>-->
+    <!--    不同的sql语句用不同的标签 注意这个下面的名称和前端页面传来的名称要和数据库的表单名一样-->
+    <insert id="saveFeedBackMsg" parameterType="com.yh.domain.FeedBackMassage">
+        INSERT INTO account values (#{name},#{tel},#{email},#{msg})
+    </insert>
+
+</mapper>

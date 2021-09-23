@@ -15,7 +15,6 @@ public class saveUserImpl implements saveUser{
     @Override
     public  void  saveUser(Account account){
 
-        System.out.println("Service业务层：保存帐户...");
         accountDao.saveUser(account);
     }
 }

@@ -14,8 +14,7 @@ public class AccountController {
 
     @RequestMapping("/register")
     public String saveAccount(Account account){
-        System.out.println("controller层：保存帐户...");
         saveUser.saveUser(account);
-        return "success";
+        return "HTML/success";
     }
 }
